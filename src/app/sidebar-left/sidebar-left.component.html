@@ -1,0 +1,18 @@
+<p-sidebar [(visible)]="sidebarMenuLeftVisible" [baseZIndex]="10000">
+  <h1 style="font-weight: normal">Sidebar left</h1>
+
+  <p>Login Sidebar</p>
+
+  <span></span>
+
+  <p-button
+    (click)="sidebarMenuLeftVisible = false"
+    label="OK"
+    styleClass="p-button-info"
+    type="button">
+  </p-button>
+</p-sidebar>
+
+<p-button (click)="sidebarMenuLeftVisible = true"
+          label="Click Here!">
+</p-button>

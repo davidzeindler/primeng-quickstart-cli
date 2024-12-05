@@ -20,9 +20,9 @@ export class TerminalComponent implements OnDestroy {
   subscription: Subscription;
 
 
-  constructor(private terminalService: TerminalService, private terminalCpmmandService: TerminalCommandService) {
+  constructor(private terminalService: TerminalService, private terminalCommandService: TerminalCommandService) {
     this.subscription = this.terminalService.commandHandler.subscribe((command: string) => {
-      this.terminalService.sendResponse(terminalCpmmandService.getResponse(command));
+      this.terminalService.sendResponse(terminalCommandService.getResponse(command));
     });
   }
 
